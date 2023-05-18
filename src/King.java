@@ -4,7 +4,7 @@ public class King extends Piece{
         super(taken,isWhite);
     }
 
-    @Override
+
     public void movement() {
 
 

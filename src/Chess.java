@@ -1,8 +1,13 @@
+import java.util.Scanner;
+
 public class Chess {
+
+    Scanner uChoice = new Scanner(System.in);
     public static void main(String[] args) {
         new Chess();
     }
     public Chess(){
+
 
         printBoard();
 
@@ -35,6 +40,12 @@ public class Chess {
     }
 
     public void game(){
+
+        boolean win = false;
+        while (!win){
+
+
+        }
 
 
 
