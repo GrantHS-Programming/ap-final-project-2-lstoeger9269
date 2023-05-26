@@ -1,11 +1,20 @@
 public class King extends Piece{
 
+    private boolean castlingDone = false;
     public King(boolean taken, boolean isWhite){
         super(taken,isWhite);
+    }
+    public boolean isCastlingDone(){
+        return this.castlingDone;
+
+    }
+    public void setCastlingDone(boolean castlingDone){
+        this.castlingDone = castlingDone;
     }
 
 
     public boolean canMove(Place start, Place end) {
+
 
         if (end.getPiece().getWhite() == this.getWhite()){
             return false;
@@ -16,7 +25,16 @@ public class King extends Piece{
         if (x + y == 1){
             return true;
         }
+        return this.isValidCastling(start, end);
 
+    }
 
+    private boolean isValidCastling(Place start, Place end ){
+        if (this.isCastlingDone()){
+            return false;
+        }
+        else{
+            return true;
+        }
     }
 }

@@ -8,6 +8,8 @@ public class Chess {
     }
     public Chess(){
 
+        resetBoard();
+
         printBoard();
 
 
@@ -17,7 +19,6 @@ public class Chess {
     int[][] board = new int[8][8];
 
     public void printBoard(){
-        resetBoard();
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 board[i][j] = i + j;
@@ -72,19 +73,19 @@ public class Chess {
                 if (position[i][j].getPiece().equals(new Rook(false, false))) {
                     System.out.print(" r ");
                 }
-                else if (position[i][j].getPiece().equals(new Bishop(false, false))) {
+                 if (position[i][j].getPiece().equals(new Bishop(false, false))) {
                     System.out.print(" b ");
                 }
-                else if (position[i][j].getPiece().equals(new Knight(false, false))) {
+                 if (position[i][j].getPiece().equals(new Knight(false, false))) {
                     System.out.print(" n ");
                 }
-                else if (position[i][j].getPiece().equals(new King(false, false))) {
+                 if (position[i][j].getPiece().equals(new King(false, false))) {
                     System.out.print(" k ");
                 }
-                else if (position[i][j].getPiece().equals(new Queen(false, false))) {
+                 if (position[i][j].getPiece().equals(new Queen(false, false))) {
                     System.out.print(" q ");
                 }
-                else if (position[i][j].getPiece().equals(new Pawn(false, false))) {
+                 if (position[i][j].getPiece().equals(new Pawn(false, false))) {
                     System.out.print(" p ");
                 }
 
