@@ -1,5 +1,6 @@
 public class Bishop extends Piece{
 
+
     public Bishop(boolean taken, boolean isWhite){
         super(taken,isWhite);
     }
@@ -28,8 +29,11 @@ public class Bishop extends Piece{
         int directionY = start.getY() > end.getY() ? 1 : -1;
 
         for (int i = 0; i < Math.abs(start.getX() - end.getX())-1; ++i) {
-            if(start.getX()+i*directionX)
+            if (Move(start.getX(),start.getY())){
+                return false;
+            }
 
         }
+        return true;
     }
 }

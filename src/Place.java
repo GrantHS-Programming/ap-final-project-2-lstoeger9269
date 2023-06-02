@@ -43,4 +43,8 @@ public class Place {
 
     }
 
+    public boolean pieceAt(){
+
+    }
+
 }
