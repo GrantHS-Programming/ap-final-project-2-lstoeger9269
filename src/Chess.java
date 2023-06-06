@@ -29,25 +29,27 @@ public class Chess {
             System.out.print((char) ('a' + i) + " ");
             for (int j = 0; j < 8; j++) {
 
-                if (position[i][j].getPiece().equals(new Rook(false,false))){
+                if (position[i][j].getPiece().equals(new Rook(false,true))){
                     System.out.print(" r ");
                 }
-                if (position[i][j].getPiece().equals(new Bishop(false,false))){
+                if (position[i][j].getPiece().equals(new Bishop(false,true))){
                     System.out.print(" b ");
                 }
-                if (position[i][j].getPiece().equals(new Knight(false,false))){
+                if (position[i][j].getPiece().equals(new Knight(false,true))){
                     System.out.print(" n ");
                 }
-                if (position[i][j].getPiece().equals(new King(false,false))){
+                if (position[i][j].getPiece().equals(new King(false,true))){
                     System.out.print(" k ");
                 }
-                if (position[i][j].getPiece().equals(new Queen(false,false))){
+                if (position[i][j].getPiece().equals(new Queen(false,true))){
                     System.out.print(" q ");
                 }
-                if (position[i][j].getPiece().equals(new Pawn(false,false))){
+                if (position[i][j].getPiece().equals(new Pawn(false,true))){
                     System.out.print(" p ");
                 }
-
+                else{
+                    System.out.print(" f ");
+                }
 
 
             }

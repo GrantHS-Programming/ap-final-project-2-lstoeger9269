@@ -25,6 +25,9 @@ public class Piece {
 
 
     }
+    public boolean pieceAt(Place end) {
+        return end.getPiece() != null;
+    }
 
 
 }

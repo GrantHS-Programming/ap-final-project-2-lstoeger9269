@@ -4,10 +4,11 @@ public class Queen extends Piece {
     }
 
     public boolean canMove(Place start, Place end){
+        if (end.getPiece().getWhite() == this.getWhite()){
+            return false;
+        }
         int x = Math.abs(start.getX() - end.getX());
         int y = Math.abs(start.getY() - end.getY());
-        if (x + y == 1){
-            return true;
-        }
+        return x + y <= 7;
     }
 }

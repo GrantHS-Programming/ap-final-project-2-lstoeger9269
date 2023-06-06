@@ -18,6 +18,13 @@ public class Bishop extends Piece{
         if (x != y){
             return false;
         }
+        else if(pieceInWayDiagonal(start, end)){
+            return false;
+
+        }
+        else{
+            return true;
+        }
 
 
 
@@ -29,11 +36,13 @@ public class Bishop extends Piece{
         int directionY = start.getY() > end.getY() ? 1 : -1;
 
         for (int i = 0; i < Math.abs(start.getX() - end.getX())-1; ++i) {
-            if (Move(start.getX(),start.getY())){
+            if (pieceAt(end)){
                 return false;
             }
 
         }
         return true;
     }
+
+
 }

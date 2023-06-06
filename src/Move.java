@@ -13,6 +13,7 @@ public class Move {
 
 
     }
+
     public boolean isCastlingMove(){
         return this.isCastlingMove();
     }

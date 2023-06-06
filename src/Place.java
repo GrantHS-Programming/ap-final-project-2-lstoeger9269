@@ -19,6 +19,8 @@ public class Place {
         return this.piece;
 
     }
+
+
     public int getX(){
 
         return this.x;
@@ -43,8 +45,6 @@ public class Place {
 
     }
 
-    public boolean pieceAt(){
 
-    }
 
 }
