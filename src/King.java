@@ -25,7 +25,11 @@ public class King extends Piece{
         if (x + y == 1){
             return true;
         }
-        return this.isValidCastling(start, end);
+        if (isCastlingDone()){
+            return this.isValidCastling(start, end);
+
+        }
+        return pieceAt(end);
 
     }
 
