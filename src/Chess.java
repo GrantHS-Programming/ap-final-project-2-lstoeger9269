@@ -24,16 +24,32 @@ public class Chess {
     Place bishop2 = new Place(0,5,new Bishop(false,true));
     Place knight2 = new Place(0,6,new Knight(false,true));
     Place rook2 = new Place(0,7,new Rook(false,true));
+    Place rook3 = new Place(7,0,new Rook(false,false));
+    Place rook4 = new Place(7,7,new Rook(false,false));
+    Place knight3 = new Place(7,1,new Knight(false,false));
+    Place bishop3 = new Place(7,2,new Bishop(false,false));
+    Place king2 = new Place(7,3,new King(false,false));
+    Place queen2 = new Place(7,4,new Queen(false,false));
+    Place bishop4 = new Place(7,5,new Bishop(false,false));
+    Place knight4 = new Place(7,6,new Knight(false,false));
     Place pawn = new Place(1,0,new Pawn(false,true));
-    Place rook3 = new Place(7,0,new Rook(false,true));
-    Place knight3 = new Place(7,1,new Knight(false,true));
-    Place bishop3 = new Place(7,2,new Bishop(false,true));
-    Place king2 = new Place(7,3,new King(false,true));
-    Place queen2 = new Place(7,4,new Queen(false,true));
-    Place bishop4 = new Place(7,5,new Bishop(false,true));
-    Place knight4 = new Place(7,6,new Knight(false,true));
-    Place rook4 = new Place(7,7,new Rook(false,true));
-    Place pawn2 = new Place(6,0,new Pawn(false,true));
+    Place pawn2 = new Place(1,1,new Pawn(false,true));
+    Place pawn3 = new Place(1,2,new Pawn(false,true));
+    Place pawn4 = new Place(1,3,new Pawn(false,true));
+    Place pawn5 = new Place(1,4,new Pawn(false,true));
+    Place pawn6 = new Place(1,5,new Pawn(false,true));
+    Place pawn7 = new Place(1,6,new Pawn(false,true));
+    Place pawn8 = new Place(1,5,new Pawn(false,true));
+    Place pawn9 = new Place(1,5,new Pawn(false,true));
+    Place pawn10 = new Place(1,5,new Pawn(false,true));
+    Place pawn11 = new Place(1,5,new Pawn(false,true));
+    Place pawn12 = new Place(1,5,new Pawn(false,true));
+    Place pawn13 = new Place(1,5,new Pawn(false,true));
+    Place pawn14 = new Place(1,5,new Pawn(false,true));
+    Place pawn15 = new Place(1,5,new Pawn(false,true));
+    Place pawn16 = new Place(1,5,new Pawn(false,true));
+
+
 
     Place[][] position = new Place[8][8];
     int[][] board = new int[8][8];
@@ -64,7 +80,7 @@ public class Chess {
                 if (position[i][j].equals(queen)){
                     System.out.print(" q ");
                 }
-                if (position[i][j].getPiece().equals(new Pawn(false,true))){
+                if (position[i][j].equals(pawn) ){
                     System.out.print(" p ");
                 }
 
@@ -105,7 +121,7 @@ public class Chess {
                  if (position[i][j].equals(queen2)) {
                     System.out.print(" q ");
                 }
-                 if (position[i][j].equals(pawn2)) {
+                 if (position[i][j].equals(pawn9) || position[i][j].equals(pawn10) || position[i][j].equals(pawn11) || position[i][j].equals(pawn12) || position[i][j].equals(pawn13) || position[i][j].equals(pawn14) || position[i][j].equals(pawn15) || position[i][j].equals(pawn16)) {
                     System.out.print(" p ");
                 }
 
@@ -128,13 +144,21 @@ public class Chess {
         position[0][6] = knight2;
         position[0][7] = rook2;
         position[7][0] = rook3;
-        position[7][1] = knight;
-        position[7][2] = bishop;
-        position[7][3] = king;
-        position[7][4] = queen;
-        position[7][5] = bishop2;
-        position[7][6] = knight2;
-        position[7][7] = rook2;
+        position[7][1] = knight3;
+        position[7][2] = bishop3;
+        position[7][3] = king2;
+        position[7][4] = queen2;
+        position[7][5] = bishop4;
+        position[7][6] = knight4;
+        position[7][7] = rook4;
+        position[6][0] = pawn9;
+        position[6][1] = pawn10;
+        position[6][2] = pawn11;
+        position[6][3] = pawn12;
+        position[6][4] = pawn13;
+        position[6][5] = pawn14;
+        position[6][6] = pawn15;
+        position[6][7] = pawn16;
 
         for (int i = 1; i < 2; i++) {
             for (int j = 0; j < 8; j++) {
@@ -142,14 +166,14 @@ public class Chess {
 
             }
         }
-
-
         for (int i = 6; i < 7; i++) {
             for (int j = 0; j < 8; j++) {
                 position[i][j] = pawn;
 
             }
         }
+
+
 
 
     }
